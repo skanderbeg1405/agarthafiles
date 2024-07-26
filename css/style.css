@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /* Banner image*/
 .header {
   width: 100%;
   background-size: cover;
+  font-family: "Bebas Neue", sans-serif;
   }
 
 .header img {
@@ -42,7 +45,7 @@ nav ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: grey;
+  background-color: #5DAE6C;
   top: 0;
   width: 100%;
 }
@@ -61,17 +64,34 @@ nav li a{
 }
 
 nav li:hover{
-  background-color: orangered;
+  background-color: #3a6442;
 }
 
 nav #active{
-  background-color: darkgreen;
+  background-color: #3a6442;
 }
 
 h1 {
-color: darkblue;
-font-family: "brush script mt" cursive;
+color: #5DAE6C;
+font-family: "Rubik", sans-serif;
 font-size: 40px;
 font-weight: bold;
 text-align: center;
+}
+
+body{
+  background-color: black;
+  font-family: "Rubik", sans-serif;
+}
+p{
+  color: white;
+}
+h5{
+  color: white;
+}
+h3{
+  color: white;
+}
+.headtext{
+  font-family: "Bebas Neue", sans-serif;
 }
