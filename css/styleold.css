@@ -45,7 +45,7 @@ nav ul{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #488acb;
+  background-color: #5DAE6C;
   top: 0;
   width: 100%;
 }
@@ -64,22 +64,22 @@ nav li a{
 }
 
 nav li:hover{
-  background-color: #1a548e
+  background-color: #3a6442;
 }
 
 nav #active{
-  background-color: #1a548e;
+  background-color: #3a6442;
 }
 
 h1 {
-color: #488acb;
+color: #5DAE6C;
 font-family: "Rubik", sans-serif;
 font-size: 40px;
 font-weight: bold;
 text-align: center;
 }
 h2 {
-color: #488acb;
+color: #5DAE6C;
 font-family: "Rubik", sans-serif;
 font-weight: bold;
 text-align: center;
@@ -92,10 +92,10 @@ p{
   color: black;
 }
 h5{
-  color: #1a548e;
+  color: #3a6442;
 }
 h3{
-  color: #488acb;
+  color: #5DAE6C;
 }
 .headtext{
   font-family: "Bebas Neue", sans-serif;
