@@ -1,13 +1,21 @@
 <!doctype html>
 <html>
   <head>
+    <script>
+      document.addEventListener('keydown', function(event) {
+        if (event.code === 'KeyH') { // Change 'KeyH' to the key you want to use
+          window.location.href = 'css/hidden_page.html'; // Replace 'hidden_page.html' with the actual filename of your hidden page
+        }
+      });
+    </script>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Home</title>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <div class="header">
-      <h1>🇦🇶 Year 10 Website  🇦🇶</h1>
+      <!--h1>🇦🇶 Year 10 Website  🇦🇶</h1-->
+      <img src="header.jpg">
     </div>
   </head>
   <body>
@@ -54,7 +62,7 @@
       <!-- now the Evaluation text box-->
       <div>
         <h3>Welcome</h3>
-        <p>This is the Year 10 Website for Techquity.</p>
+        <p>This is the Year 10 Website for Techquity. Dont Press H</p>
       </div>
     </div>
     <footer>

@@ -1,0 +1,78 @@
+h<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Rain Animation</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      overflow: hidden; /* Prevent scrollbars */
+    }
+    #message {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    #matrix {
+      position: fixed; /* Stay in place */
+      top: 0;
+      left: 0;
+      pointer-events: none; /* Allow clicking through */
+      z-index: -1; /* Put the canvas behind other content */
+    }
+  </style>
+</head>
+<body>
+  <h1 id="message">You Shouldnt Be here</h1>
+  <p id="message" >Get out</p>
+  <img id="message" src="fbi.png" width="200">
+  <canvas id="matrix"></canvas>
+  <script>
+    const canvas = document.getElementById('matrix');
+    const ctx = canvas.getContext('2d');
+
+    // Set canvas size to full viewport
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Character set
+    const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+=-`~[]{}\|:;'<>,.?/";
+
+    // Create a list of falling characters
+    const fallingChars = [];
+    const numChars = 200; // Adjust this value for more or fewer characters
+    for (let i = 0; i < numChars; i++) {
+      fallingChars.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        char: chars[Math.floor(Math.random() * chars.length)],
+        speed: Math.random() * 5 + 1
+      });
+    }
+
+    // Function to draw falling characters
+    function drawChars() {
+      // Clear the canvas with a very low opacity
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.01)'; 
+      ctx.fillRect(0, 0, canvas.width, canvas.height); 
+
+      fallingChars.forEach(char => {
+        ctx.fillStyle = 'lime'; // Lime green color
+        ctx.fillText(char.char, char.x, char.y);
+
+        char.y += char.speed;
+        if (char.y > canvas.height) {
+          char.y = 0;
+          char.x = Math.random() * canvas.width;
+          char.char = chars[Math.floor(Math.random() * chars.length)];
+        }
+      });
+    }
+
+    // Animation loop
+    setInterval(drawChars, 50);
+  </script>
+</body>
+</html>
